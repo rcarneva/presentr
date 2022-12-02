@@ -21,7 +21,7 @@ def james(limit = 1, tag = 'james'):
     ''' return json response from tumblr api '''
     tag = tag.replace(' ', '_')
     key = 'XO7suEuSmJhFAZdhHJBjDYeaecyfVatJBKtOhFzG8AH0VTiArJ' # consumer key
-    url = 'http://api.tumblr.com/v2/tagged?tag=%s&limit=%d&filter=text&api_key=%s'
+    url = 'https://api.tumblr.com/v2/tagged?tag=%s&limit=%d&filter=text&api_key=%s'
     return load(urlopen(url % (tag, limit, key)))
 
 def get_photos(response, limit=10):
